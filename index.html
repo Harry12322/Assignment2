@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+<body style="background-color: rgba(55, 54, 59, 0.5);">
+
+<div>
+<img class="img-title" src="img/title.jpg" alt="my title">
+</div>
+<p style="color: white; font-size: 20px; text-align: center">The following map shows the HDI of each country in 2016. The darker the color, the higher the HDI of the country.</p>
+<p style="color: red; font-size: 20px; text-align: center">When you point to a location on the map, it will display the country’s name, HDI value and population.</p>
+<div id="HDI_map"></div>
+
+<script type="text/javascript">
+  var spec2 = "js/assignment2_HDI_map.vg.json";
+  vegaEmbed('#HDI_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+</script>
+
+<br>
+<p style="color: white; font-size: 20px; text-align: center">The following map shows the GDP of each country in 2016. The darker the color, the higher the GDP of the country.</p>
+<p style="color: red; font-size: 20px; text-align: center">When you point to a location on the map, it will display the country’s name, GDP value and population.</p>
+<div id="GDP_map"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/assignment2_GDP_map.vg.json";
+  vegaEmbed('#GDP_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<br>
+<p style="color: white; font-size: 20px; text-align: center">The following bubble chart shows the comparison of HDI and GDP in each country, the population of the country <br>and shows the data for each continent.</p>
+<p style="color: red; font-size: 20px; text-align: center">If you want to see the data for each continent, click on the name of each continent or use the "Continent Selection" below.</p>
+<div id="scatter_plot"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/Bubble_plot.vg.json";
+  vegaEmbed('#scatter_plot', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>
